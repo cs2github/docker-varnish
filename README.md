@@ -19,7 +19,7 @@ docker run -d \
   --env 'VARNISH_STORAGE=malloc,1G' \
   --name cs2agvarnish \
   -p 8080:80 \
-  -p 9080:6082 \
+  -p 8081:6082 \
   cs2ag/varnish:4.0.2
 ```
 
@@ -39,6 +39,13 @@ You can mount a host directory which contains at least the vcl and the secrect f
 > secret
 
 > -v `/srv/www/varnish_config:/etc/varnish`
+
+## Exposing ports
+
+The following ports can be exposed in order to use Varnish on container host:
+
+> **80** `Varnish port`
+> **6082** `Varnish admin port`
 
 ## Author
 
