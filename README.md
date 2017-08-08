@@ -47,6 +47,13 @@ The following ports can be exposed in order to use Varnish on container host:
 > **80** `Varnish port`
 > **6082** `Varnish admin port`
 
+## Reload varnish vcl file
+
+```
+docker container exec CONTAINER_NAME '/usr/share/varnish/reload-vcl'
+```
+
+
 ## Author
 
 * Stefan Preissner (<github@cs2.ch>)  
