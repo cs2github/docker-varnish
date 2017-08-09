@@ -25,7 +25,7 @@ ENV VARNISH_PORT 80
 # Expose port 80 
 EXPOSE 80
 
-#ADD parse /parse
+# ADD start.sh
 ADD start.sh /usr/local/bin/start.sh
 
 # Make script executable
