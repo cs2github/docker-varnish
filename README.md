@@ -1,15 +1,26 @@
-# Varnish 4.x Docker container
+# Varnish 3/4.x Docker container
+
+A Docker container with Varnish 3.x built on top of Debian 7 **OR**
 A Docker container with Varnish 4.x built on top of Debian 8
 
-# Varnish Docker container
+# Varnish 3 Docker container
+
+> Debian 7
+
+> Varnish 3.x
+
+# Varnish 4 Docker container
 
 > Debian 8
 
 > Varnish 4.x
 
+
 ## Usage
 
 You'll need a custom vcl file and a Varnish secret file to use this container. You can either (re)build the image with those files or you can mount a host directory when running the container.
+
+**Hint:** To use Varnish3, use "cs2ag/varnish:varnish3".
 
 
 ```
@@ -59,3 +70,4 @@ docker container exec CONTAINER_NAME '/usr/share/varnish/reload-vcl'
 * Stefan Preissner (<github@cs2.ch>)  
 
 ---
+
