@@ -1,5 +1,5 @@
 # Base image
-FROM debian:8.9
+FROM debian:7.11
 
 MAINTAINER Stefan Preissner <github@cs2.ch>
 
