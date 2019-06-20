@@ -1,7 +1,7 @@
 # Base image
-FROM debian:8.9
+FROM debian:9.9
 
-MAINTAINER Stefan Preissner <github@cs2.ch>
+MAINTAINER CS2 <github@cs2.ch>
 
 ENV DEBIAN_FRONTEND noninteractive
 
