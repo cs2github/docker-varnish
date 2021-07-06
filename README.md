@@ -1,44 +1,35 @@
-# Varnish 3/4.x Docker container
+# Varnish 6.4 Docker container
 
-A Docker container with Varnish 3.x built on top of Debian 7 **OR**
-A Docker container with Varnish 4.x built on top of Debian 8
+A Docker container with Varnish 6.4 built on top of Debian 10
 
-# Varnish 3 Docker container
+# Varnish 6.4 Docker container
 
-> Debian 7
+> Debian 10
 
-> Varnish 3.x
-
-# Varnish 4 Docker container
-
-> Debian 8
-
-> Varnish 4.x
+> Varnish 6.4
 
 
 ## Usage
 
 You'll need a custom vcl file and a Varnish secret file to use this container. You can either (re)build the image with those files or you can mount a host directory when running the container.
 
-**Hint:** To use Varnish3, use "cs2ag/varnish:varnish3".
-
 
 ```
 docker run -d \
   -v SOME_HOST_DIRECTORY_WITH_VARNISH_FILES:/etc/varnish \
-  --env 'VARNISH_PARAMS=-p cli_buffer=32768 -p pipe_timeout=1440 -p syslog_cli_traffic=off -p feature=+esi_ignore_https' \
+  --env 'VARNISH_PARAMS=-p pipe_timeout=1440 -p syslog_cli_traffic=off -p feature=+esi_ignore_https' \
   --env 'VARNISH_STORAGE=malloc,1G' \
   --name cs2agvarnish \
   -p 8080:80 \
   -p 8081:6082 \
-  cs2ag/varnish:4.0.2
+  cs2ag/varnish:v6.4
 ```
 
 ## Environmental variables
 
 You can configure Varnish daemon by passing following environment variables with _docker run_ command:
 
-> **VARNISH_PARAMS** `-p cli_buffer=32768 -p pipe_timeout=1440 -p syslog_cli_traffic=off -p feature=+esi_ignore_https`  
+> **VARNISH_PARAMS** `-p pipe_timeout=1440 -p syslog_cli_traffic=off -p feature=+esi_ignore_https`  
 > **VARNISH_STORAGE** `malloc,1G`  
 
 ## Mounting host directory
@@ -67,7 +58,7 @@ docker container exec CONTAINER_NAME '/usr/share/varnish/reload-vcl'
 
 ## Author
 
-* Stefan Preissner (<github@cs2.ch>)  
+* Peter Misinsky (<github@cs2.ch>)  
 
 ---
 
