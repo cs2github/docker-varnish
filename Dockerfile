@@ -1,5 +1,5 @@
 # Base image
-FROM debian:9.9
+FROM debian
 
 MAINTAINER CS2 <github@cs2.ch>
 
@@ -8,8 +8,13 @@ ENV DEBIAN_FRONTEND noninteractive
 # Update the package repository 
 RUN apt-get -qq update
 
+RUN apt-get -qq install curl
+
 # Install base system 
-RUN apt-get install -y varnish
+# RUN apt-get install -y varnish
+RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish64/script.deb.sh | bash
+
+RUN apt-get -y install varnish=6.4.0-1~buster
 
 # Clear package cache
 RUN apt-get clean
