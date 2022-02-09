@@ -1,12 +1,12 @@
-# Varnish 6.4 Docker container
+# Varnish 6.5 Docker container
 
-A Docker container with Varnish 6.4 built on top of Debian 10
+A Docker container with Varnish 6.5 built on top of Debian 10
 
-# Varnish 6.4 Docker container
+# Varnish 6.5 Docker container
 
 > Debian 10
 
-> Varnish 6.4
+> Varnish 6.5
 
 
 ## Usage
@@ -22,7 +22,7 @@ docker run -d \
   --name cs2agvarnish \
   -p 8080:80 \
   -p 8081:6082 \
-  cs2ag/varnish:v6.4
+  cs2ag/varnish:v6.5
 ```
 
 ## Environmental variables
