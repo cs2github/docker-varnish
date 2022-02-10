@@ -7,8 +7,8 @@ import std;
 
 
 backend default {
-    .host = "ADD_BACKEND_HOST_HERE";
-    .port = "ADD_BACKEND_PORT_HERE";
+    .host = "10.44.50.31";
+    .port = "8081";
     .first_byte_timeout = 600s;
     .probe = {
         .url = "/pub/health_check.php";

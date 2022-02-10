@@ -1,5 +1,5 @@
 # Base image
-FROM debian
+FROM debian:buster
 
 MAINTAINER CS2 <github@cs2.ch>
 
