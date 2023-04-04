@@ -12,9 +12,9 @@ RUN apt-get -qq install curl
 
 # Install base system 
 # RUN apt-get install -y varnish
-RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish70/script.deb.sh | bash
+RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish71/script.deb.sh | bash
 
-RUN apt-get -y install varnish=7.0.2-1~buster
+RUN apt-get -y install varnish=7.1.2-1~buster
 
 # Clear package cache
 RUN apt-get clean
